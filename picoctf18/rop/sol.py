@@ -1,6 +1,6 @@
 from pwn import *
 
-# s = ssh(host='2018shell1.picoctf.com',user='dr3dd',password='yoyoman12345')
+# s = ssh(host='2018shell1.picoctf.com',user='dr3dd',password='')
 
 # p = s.process('/problems/rop-chain_2_d25a17cfdcfdaa45844798dd74d03a47/rop')
 p  = process('./rop')
