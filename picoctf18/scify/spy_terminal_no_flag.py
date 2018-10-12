@@ -1,6 +1,6 @@
 #!/usr/bin/python2 -u
 from pwn import * 
-flag = "picoCTF{@g3nt6_1$_th3_c00l3$t_2432504}"
+flag = "picoCTF{"
 
 for j in range(1,14):
     print(".................................................",j)
@@ -24,3 +24,5 @@ for j in range(1,14):
             flag += chr(i)
             print(flag)
             break
+
+            #picoCTF{@g3nt6_1$_th3_c00l3$t_2432504}
