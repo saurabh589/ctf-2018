@@ -1,0 +1,24 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Mon Sep  3 04:57:46 2018
+Invocation: foremost thunder.pcap 
+Output directory: /home/dr3dd/ctf-2018/codefest18/thunder/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: thunder.pcap
+Start: Mon Sep  3 04:57:46 2018
+Length: 3 MB (3794011 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00002036.jpg 	       3 KB 	    1042881 	 
+1:	00002147.jpg 	       3 KB 	    1099519 	 
+Finish: Mon Sep  3 04:57:46 2018
+
+2 FILES EXTRACTED
+	
+jpg:= 2
+------------------------------------------------------------------
+
+Foremost finished at Mon Sep  3 04:57:46 2018
