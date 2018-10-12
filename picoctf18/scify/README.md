@@ -76,7 +76,7 @@ Now if we send input with one less 'C' then blocks is:
        'BBBBBBBBBBBBBBBB'    <--- 16  (Block 5)
        'CCCCCCCCCCCCCCC\n'   <--- 16  (Block 6)
        'My agent identif'    <--- 16  (Block 7)
-       'ying code is:  p'    <--- 16  (Block 8)    <-- Now we know block 8 has our one byte flag but we know encryption of that block.
+       'ying code is:  p'    <--- 16  (Block 8)    <-- Now we know block 8 has our one byte flag but it is encrypted we dont know what the char is.
        'icoCTF{ABCDEFG}.'    <--- 16  (Block 9)    <---unknown block 
        'Down with the So'    <--- 16  (Block 10)   <---known Block
     ```
