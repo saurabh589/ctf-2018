@@ -47,7 +47,7 @@ print encrypt( """key""", message )
 
 
 lets send input message : 
-```({0}) = AAAAAAAAAAA + BBBBBBBBBBBBBBBB   <--   'A'x11 (offset) + 'B'x16 + 'C'x16```
+``` AAAAAAAAAAA + BBBBBBBBBBBBBBBB   <--   'A'x11 (offset) + 'B'x16 + 'C'x16```
 
 suppose flag is : ```picoCTF{ABCDEFG}```
 
