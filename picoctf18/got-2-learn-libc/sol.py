@@ -1,6 +1,6 @@
 from pwn import *
 
-s = ssh(host='2018shell1.picoctf.com', user='dr3dd', password='yoyoman12345')
+s = ssh(host='2018shell1.picoctf.com', user='dr3dd', password='')
 p = s.process('/problems/got-2-learn-libc_3_6e9881e9ff61c814aafaf92921e88e33/vuln')
 
 # p = process('./vuln')
