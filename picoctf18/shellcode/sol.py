@@ -1,6 +1,6 @@
 from pwn import *
 
-s = ssh(host='2018shell1.picoctf.com',user='dr3dd',password='yoyoman12345')
+s = ssh(host='2018shell1.picoctf.com',user='dr3dd',password='')
 
 p = s.process('/problems/shellcode_4_99838609970da2f5f6cf39d6d9ed57cd/vuln')
 
