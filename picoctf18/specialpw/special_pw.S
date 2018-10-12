@@ -1,0 +1,106 @@
+.intel_syntax noprefix
+.bits 32
+	
+.global main	; int main(int argc, char **argv)
+
+
+main:
+	push   ebp
+	mov    ebp,esp
+	sub    esp,0x10
+	mov    DWORD  [ebp-0xc],0x0
+	mov    eax,DWORD  [ebp+0xc]
+	mov    eax,DWORD  [eax+0x4]
+	mov    DWORD  [ebp-0x4],eax
+	jmp    part_b
+part_a:
+	add    DWORD  [ebp-0xc],0x1
+	add    DWORD  [ebp-0x4],0x1
+part_b:	
+	mov    eax,DWORD  [ebp-0x4]
+	movzx  eax,BYTE  [eax]
+	test   al,al
+	jne    part_a
+	mov    DWORD  [ebp-0x8],0x0
+	jmp    part_d
+part_c:	
+	mov    eax,DWORD  [ebp+0xc]
+	add    eax,0x4
+	mov    edx,DWORD  [eax]
+	mov    eax,DWORD  [ebp-0x8]
+	add    eax,edx
+	mov    DWORD  [ebp-0x4],eax
+	mov    eax,DWORD  [ebp-0x4]
+	movzx  eax,BYTE  [eax]
+	xor    eax,0x4c
+	mov    edx,eax
+	mov    eax,DWORD  [ebp-0x4]
+	mov    BYTE  [eax],dl
+	mov    eax,DWORD  [ebp-0x4]
+	movzx  eax,WORD  [eax]
+	ror    ax,0x9
+	mov    edx,eax
+	mov    eax,DWORD  [ebp-0x4]
+	mov    WORD  [eax],dx
+	mov    eax,DWORD  [ebp-0x4]
+	mov    eax,DWORD  [eax]
+	rol    eax,0x7
+	mov    edx,eax
+	mov    eax,DWORD  [ebp-0x4]
+	mov    DWORD  [eax],edx
+	add    DWORD  [ebp-0x8],0x1
+part_d:	
+	mov    eax,DWORD  [ebp-0xc]
+	sub    eax,0x3
+	cmp    eax,DWORD  [ebp-0x8]
+	jg     part_c
+	mov    eax,DWORD  [ebp+0xc]
+	mov    eax,DWORD  [eax+0x4]
+	mov    DWORD  [ebp-0x4],eax
+	mov    DWORD  [ebp-0x10],0x3c7fc74
+	jmp    part_f
+part_e:	
+	mov    eax,DWORD  [ebp-0x4]
+	movzx  edx,BYTE  [eax]
+	mov    eax,DWORD  [ebp-0x10]
+	movzx  eax,BYTE  [eax]
+	cmp    dl,al
+	je     part_k
+	mov    eax,0x0
+	jmp    part_h
+part_k:	
+	add    DWORD  [ebp-0x4],0x1
+	add    DWORD  [ebp-0x10],0x1
+part_f:	
+	mov    eax,DWORD  [ebp-0x10]
+	movzx  eax,BYTE  [eax]
+	test   al,al
+	jne    part_e
+	mov    eax,DWORD  [ebp+0xc]
+	add    eax,0x4
+	mov    eax,DWORD  [eax]
+	mov    edx,DWORD  [ebp-0x10]
+	mov    ecx,0x3c7fc74
+	sub    edx,ecx
+	add    eax,edx
+	movzx  eax,BYTE  [eax]
+	test   al,al
+	je     part_g
+	mov    eax,0x0			; LOGIN_FAILED
+	jmp    part_h
+part_g:	
+	mov    eax,0x1			; LOGIN_SUCCESS
+part_h:	
+	leave
+	ret
+
+
+
+03C7FC74:  37 a1 2a a3 bd 33 22 ba  2f 3c 98 aa b9 2f 39 a4   |7.*..3"./<.../9.|
+03C7FC84:  18 33 aa 9a 2f 39 18 b3  24 3a af 18 99 1c 1c b1   |.3../9..$:......|
+03C7FC94:  19 b1 98 1b 3e 59 ae a6  00                        |....>Y...|
+
+
+
+
+
