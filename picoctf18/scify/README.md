@@ -148,7 +148,6 @@ for j in range(1,14):
         y = q.recv(1024).decode('hex')
         q.close()
         if y[80:96] == enc_msg[128:144]:
-            print('yes...................................................................................yes')
             flag += chr(i)
             break
 print(flag)
