@@ -16,7 +16,7 @@ welcome = "Welcome, Agent 006!"
 print welcome
 
 sitrep = raw_input("Please enter your situation report: ")
-message = "Agent,\nGreetings. My situation report is as follows:\nAAAAAAAAAAABBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCC\nMy agent identifying code is: picoCTF{@g3nt6_1$_th3_c0.........}.\nDown with the Soviets,\n006\n"
+message = "Agent,\nGreetings. My situation report is as follows:\n{0}\nMy agent identifying code is: {1}.\nDown with the Soviets,\n006\n".format(sitrep,agent_code)
 
 message = pad(message)
 print encrypt( """key""", message )
