@@ -112,7 +112,7 @@ Now if we send input with one less 'C' then blocks is:
        'ing code is: p%s'     <--- 16  (Block 5)    <--- replace %s to char in range(32,128)   
        'CCCCCCCCCCCCCC\nM'    <--- 16  (Block 6)
        'y agent identify'     <--- 16  (Block 7)
-       'ing code is:  pi'     <--- 16  (Block 8)    <--- Now we know block 8 has our one byte flag
+       'ing code is:  pi'     <--- 16  (Block 8)    <--- Now we know block 8 has our two byte flag in which one we know i.e "p" and other we have to find out in second loop.
        'coCTF{ABCDEFG}.D'     <--- 16  (Block 9)    <--- unknown block 
        'own with the Sov'     <--- 16  (Block 10)   <--- known Block
     ```
