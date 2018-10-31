@@ -1,8 +1,8 @@
 <h2>PicoCTF18 (SpyFi ,300 pt)</h2>
 
-In this challange they use AES-ECB mode which we know it is quite vulnerable.
+In this challange they use **AES-ECB** mode which we know it is quite vulnerable.
 
-If you dont know how AES-ECB works i would suggest to read about first.
+If you dont know how **AES-ECB** works i would suggest to read about first.
 [AES-ECB](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_Codebook_(ECB))
 
 **AES-ECB Encryption and Decryption flow chart**
